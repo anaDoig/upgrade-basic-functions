@@ -51,3 +51,19 @@ function average() {
     return averageResult;
 };
 console.log(average());
+
+/* Iteración 5 */
+const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
+let numberSum = 0;
+let stringSum = 0;
+
+function averageWord(param) {
+    param.forEach(function (element) {
+        if (typeof element === 'number') {
+            numberSum += element;
+        } else if (typeof element === 'string') {
+            stringSum += element.length;
+        }
+    });
+}
+averageWord(mixedElements);
