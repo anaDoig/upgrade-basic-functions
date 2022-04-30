@@ -67,3 +67,30 @@ function averageWord(param) {
     });
 }
 averageWord(mixedElements);
+
+/* Iteración 6 */
+const duplicates = [
+    'sushi',
+    'pizza',
+    'burger',
+    'potatoe',
+    'pasta',
+    'ice-cream',
+    'pizza',
+    'chicken',
+    'onion rings',
+    'pasta',
+    'soda'
+];
+let checkDuplicate;
+function removeDuplicates(param) {
+    param.forEach(function (element) {
+        checkDuplicate = param.shift();
+        console.log(checkDuplicate);
+        if(!param.includes(checkDuplicate)) {
+            param.push(checkDuplicate);
+        }
+        
+    });
+}
+removeDuplicates(duplicates);
