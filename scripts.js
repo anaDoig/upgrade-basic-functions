@@ -36,4 +36,18 @@ function sumAll() {
     return sum;
 };
 
-console.log(sumAll())
+console.log(sumAll());
+
+/* Iteración 4 */
+const numbers2 = [12, 21, 38, 5, 45, 37, 6];
+let averageResult;
+let sum2 = 0;
+
+function average() {
+    numbers2.forEach(function (element) {
+        sum2 += element;
+    });
+    averageResult = sum2 / numbers2.length;
+    return averageResult;
+};
+console.log(average());
