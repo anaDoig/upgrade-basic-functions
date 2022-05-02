@@ -111,7 +111,6 @@ const nameFinder = [
 ];
 
 function finderName(param, name) {
-    console.log(name);
     for (let key in param) {
         if(param.includes(name)) {
             return true;
@@ -121,3 +120,37 @@ function finderName(param, name) {
     }
 };
 finderName(nameFinder, 'Bruce');
+
+console.log('------------');
+
+/* Iteración 8 */
+const counterWords = [
+    'code',
+    'repeat',
+    'eat',
+    'sleep',
+    'code',
+    'enjoy',
+    'sleep',
+    'code',
+    'enjoy',
+    'upgrade',
+    'code'
+];
+let counter = 0;
+let word;
+function repeatCounter(param) {
+    param.forEach(function (element) {
+        if(!word) {
+            word = element;
+        }
+        if(word === element) {
+            counter ++;
+        }
+    });
+    console.log(`La palabra '${word}' se repite ${counter} veces`);
+    counter = 0;
+    word = undefined;
+};
+
+repeatCounter(counterWords);
