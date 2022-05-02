@@ -94,3 +94,30 @@ function removeDuplicates(param) {
     });
 }
 removeDuplicates(duplicates);
+
+/* Iteración 7 */
+const nameFinder = [
+    'Peter',
+    'Steve',
+    'Tony',
+    'Natasha',
+    'Clint',
+    'Logan',
+    'Xabier',
+    'Bruce',
+    'Peggy',
+    'Jessica',
+    'Marc'
+];
+
+function finderName(param, name) {
+    console.log(name);
+    for (let key in param) {
+        if(param.includes(name)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+};
+finderName(nameFinder, 'Bruce');
